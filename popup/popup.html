@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Tracker</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="main-view">
+            <header>
+                <h1>Crypto Tracking</h1>
+                <select id="currency-select">
+                    <option value="usd">USD ($)</option>
+                    <option value="try">TRY (₺)</option>
+                </select>
+                <button id="add-btn" title="Add New Coin">+</button>
+            </header>
+            <div id="add-coin-container" class="hidden">
+                <input type="text" id="coin-input" placeholder="Coin ID (example: bitcoin)">
+                <button id="save-coin-btn">Add</button>
+                <button id="cancel-btn">Cancel</button>
+            </div>
+
+            <div id="crypto-list" class="crypto-list">
+                <div class="loading">Loading...</div>
+            </div>
+        </div>
+
+        <div id="analytics-view" class="hidden">
+            <div class="analytics-header">
+                <button id="back-btn" title="Back">&lt;</button>
+                <h2 id="analytics-title">CoinName</h2>
+            </div>
+            <div id="analytics-chart"></div>
+            <div id="analytics-stats"></div>
+        </div>
+    </div>
+    <script type="module" src="../dist/popup.js"></script>
+</body>
+
+</html>
